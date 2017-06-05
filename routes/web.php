@@ -16,3 +16,8 @@ Route::get('/', function () {
 });
 
 Route::get('docs/{version}', 'DocController@index');
+Route::get('docs/{version}/{slug}', 'DocController@show');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

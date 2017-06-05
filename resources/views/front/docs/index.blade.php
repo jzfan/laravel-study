@@ -4,13 +4,12 @@
 <ul>
     @foreach($groups as $group)
     <li>
-    @foreach($group as $entry)
+        @foreach($group as $entry)
         @if ($loop->first)
         <h3>{{ $entry->category }}</h3>
-       @endif
-        <h5>{{ $entry->entry }}</h5>
-
-    @endforeach
+        @endif
+        <p><a href="/docs/{{ $version }}/{{ $entry->slug }}">{{ $entry->entry }}</a></p>
+        @endforeach
     </li>
     @endforeach
 </ul>
