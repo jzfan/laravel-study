@@ -2,12 +2,16 @@
 
 @section('content')
 <ul>
-@foreach($entries as $entry)
-<li>
-	
-<span>{{ $entry->entry }}</span>
-<span>{{ $entry->title }}</span>
-</li>
-@endforeach
+    @foreach($groups as $group)
+    <li>
+    @foreach($group as $entry)
+        @if ($loop->first)
+        <h3>{{ $entry->category }}</h3>
+       @endif
+        <h5>{{ $entry->entry }}</h5>
+
+    @endforeach
+    </li>
+    @endforeach
 </ul>
 @stop
