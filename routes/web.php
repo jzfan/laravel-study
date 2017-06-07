@@ -10,15 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-Route::get('/', 'PageController@index');
-Route::get('/articles/{slug}', 'ArticleController@show');
-
-Route::get('docs/{version}', 'DocController@index');
-Route::get('docs/{version}/{id}', 'DocController@show');
-Route::get('dashboard', 'DashboardController@index');
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['namespace'=>'front'], function () {
+	Route::get('/', 'PageController@index');
+	Route::get('/articles/{id}', 'ArticleController@show');
+	Route::get('docs/{version}', 'DocController@index');
+	Route::get('docs/{version}/{id}', 'DocController@show');
+	Route::get('/home', 'HomeController@index')->name('home');
+});
+
+Route::group(['namespace'=>'back'], function () {
+	Route::get('dashboard', 'DashboardController@index');
+});
+Route::group(['namespace'=>'back', 'prefix'=>'back'], function () {
+	Route::get('docs', 'DocController@index');
+	Route::get('docs/{doc}/edit', 'DocController@edit');
+	Route::put('docs/{doc}', 'DocController@update');
+});
+

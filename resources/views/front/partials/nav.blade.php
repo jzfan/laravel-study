@@ -30,6 +30,9 @@
                      <li><a href="/docs/5.4">5.4</a></li>
                  </ul>
              </li>
+             <li><a href="">博客</a></li>
+             <li><a href="">教程</a></li>
+             <li><a href="">项目|包</a></li>
          </ul>
 
          <!-- Right Side Of Navbar -->

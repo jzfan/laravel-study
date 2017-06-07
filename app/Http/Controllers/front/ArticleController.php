@@ -1,15 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\front;
 
 use App\Article;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class ArticleController extends Controller
 {
-    public function show($slug)
+    public function show($id)
     {
-        $article = Article::whereSlug($slug)->first();
+        $article = Article::find($id);
         $article->increment('view');
         return view('front.article', compact('article'));
     }

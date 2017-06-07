@@ -12,18 +12,19 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- include summernote css/js-->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        @include('front.partials.nav')
+        @include('back.partials.nav')
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
-                    
-                @yield('content')
+                <div class="col-md-2">
+                    @include('back.partials.sidebar')
                 </div>
-                <div class="col-md-4">
-                    @yield('sidebar')
+                <div class="col-md-10">
+                    @yield('content')
                 </div>
             </div>
         </div>
@@ -31,5 +32,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.js"></script>
+    @yield('js')
 </body>
 </html>

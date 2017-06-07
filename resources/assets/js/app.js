@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+require('textarea-autosize');
 
 // window.Vue = require('vue');
 

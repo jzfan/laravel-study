@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\front;
 
 use App\Doc;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class DocController extends Controller
 {
