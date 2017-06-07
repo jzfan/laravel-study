@@ -27,7 +27,6 @@ $factory->define(App\Article::class, function (Faker\Generator $faker) {
 	$title = $faker->sentence;
     return [
         'title' => $title,
-        'slug' => str_slug($title),
         'content' => $faker->paragraph,
         'view' => 0
     ];

@@ -11,8 +11,13 @@
 |
 */
 
+
 Route::get('/', 'PageController@index');
 Route::get('/articles/{slug}', 'ArticleController@show');
+
+Route::get('docs/{version}', 'DocController@index');
+Route::get('docs/{version}/{id}', 'DocController@show');
+Route::get('dashboard', 'DashboardController@index');
 
 Auth::routes();
 
