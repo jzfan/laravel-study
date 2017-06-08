@@ -8,9 +8,9 @@ use App\Http\Controllers\Controller;
 
 class ArticleController extends Controller
 {
-    public function show($tag, $id)
+    public function show($category, $id)
     {
-        $article = Article::find($id);
+        $article = Article::with('tags')->find($id);
         $article->increment('view');
         return view('front.article', compact('article'));
     }

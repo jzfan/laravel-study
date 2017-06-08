@@ -17,7 +17,7 @@ Route::group(['namespace'=>'front'], function () {
     Route::get('docs/{version}', 'DocController@index');
     Route::get('docs/{version}/{id}', 'DocController@show');
     Route::get('/home', 'HomeController@index')->name('home');
-	Route::get('/{tag}/{id}', 'ArticleController@show');
+	Route::get('/{category}/{id}', 'ArticleController@show')->where(['category' => '(php|js|package|laravel)', 'id' => '[0-9]+']);
 });
 
 Route::group(['namespace'=>'back', 'middleware'=>'admin'], function () {
@@ -25,7 +25,9 @@ Route::group(['namespace'=>'back', 'middleware'=>'admin'], function () {
     Route::group(['prefix'=>'back'], function () {
     	Route::get('docs', 'DocController@index');
     	Route::get('docs/{doc}/edit', 'DocController@edit');
-    	Route::put('docs/{doc}', 'DocController@update');
+        Route::put('docs/{doc}', 'DocController@update');
+        Route::get('{category}', 'ArticleController@index')->where(['category' => '(php|js|package|laravel)']);
+    	Route::get('{category}/{article}/edit', 'ArticleController@edit')->name('articleEdit')->where(['category' => '(php|js|package|laravel)', 'article' => '[0-9]+']);
     });
 });
 

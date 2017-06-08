@@ -30,9 +30,10 @@
              </a>
 
              <ul class="dropdown-menu" role="menu">
-                 <li><a href="/docs/5.4">5.4</a></li>
-                 <li><a href="/docs/5.4">5.4</a></li>
-                 <li><a href="/docs/5.4">5.4</a></li>
+                 <li><a href="/docs/5.4">Laravel 5.4</a></li>
+                 <li><a href="/docs/5.3">Laravel 5.3</a></li>
+                 <li><a href="/docs/5.2">Laravel 5.2</a></li>
+                 <li><a href="/docs/5.1">Laravel 5.1</a></li>
              </ul>
          </li>
          <li><a href="">Laravel</a></li>

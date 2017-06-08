@@ -11,12 +11,12 @@ class DocController extends Controller
     public function index()
     {
     	$doc = Doc::latest()->paginate(10);
-    	return view('back.doc.index', compact('doc'));
+    	return view('back.docs.index', compact('doc'));
     }
 
     public function edit(Doc $doc)
     {
-    	return view('back.doc.edit', compact('doc'));
+    	return view('back.docs.edit', compact('doc'));
     }
 
     public function update(Doc $doc)

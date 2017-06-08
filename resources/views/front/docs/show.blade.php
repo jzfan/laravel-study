@@ -10,15 +10,13 @@
 @stop
 
 @section('sidebar')
-<ul class="list-group">
+<nav class="hidden-print hidden-xs hidden-sm affix" role="navigation">
+<ul class="nav">
 @foreach($entry->anchors as $index => $text)
-            <li class="list-group-item">
-    @if (! preg_match('/^\d{1,3}、/', $text))
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    @endif
-            <a href="#{{ $index }}">
-    {{ $text }}</a>
+            <li>
+    <a @if (! preg_match('/^\d{1,3}、/', $text)) style="text-indent: 20px" @endif href="#{{ $index }}">{{ $text }}</a>
 </li>
 @endforeach
 </ul>
+</nav>
 @stop

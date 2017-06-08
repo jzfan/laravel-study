@@ -30,6 +30,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="/js/simplemde.min.js"></script>
     @yield('js')
 </body>
 </html>

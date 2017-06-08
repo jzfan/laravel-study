@@ -12,25 +12,15 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/dashboard') }}">
-                {{ config('app.name', 'Laravel') }} 后台
+                {{ config('app.name', 'Laravel') }}后台
             </a>
         </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-             <li class="dropdown">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                     文档 <span class="caret"></span>
-                 </a>
-
-                 <ul class="dropdown-menu" role="menu">
-                     <li><a href="/docs/5.4">5.4</a></li>
-                     <li><a href="/docs/5.4">5.4</a></li>
-                     <li><a href="/docs/5.4">5.4</a></li>
-                 </ul>
-             </li>
-         </ul>
+            
+           </ul>
 
          <!-- Right Side Of Navbar -->
          <ul class="nav navbar-nav navbar-right">

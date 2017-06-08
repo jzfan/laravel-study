@@ -10,7 +10,7 @@ class Doc extends Model
 
     public function appendAnchors()
     {
-        preg_match_all('/(toc_\d{1,2})[\'|\"]>(.+?)</', $this->content, $matches);
+        preg_match_all('/(anchor_\d{1,2})[\'|\"]>(.+?)</', $this->content, $matches);
         $this->anchors = collect($matches[1])->combine($matches[2]);
         return $this;
     }
