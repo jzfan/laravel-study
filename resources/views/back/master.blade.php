@@ -22,6 +22,8 @@
                     @include('back.partials.sidebar')
                 </div>
                 <div class="col-md-10">
+        @includeWhen(session()->has('success'), 'back.partials.success')
+        @includeWhen(session()->has('errors'), 'back.partials.errors')
                     @yield('content')
                 </div>
             </div>
@@ -30,7 +32,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="/js/simplemde.min.js"></script>
+    <!-- <script src="/js/simplemde.min.js"></script> -->
     @yield('js')
 </body>
 </html>

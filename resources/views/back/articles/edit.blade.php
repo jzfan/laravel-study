@@ -8,15 +8,16 @@
 	<form action="/back/articles/{{ $article->id }}" method="POST">
 		{!! method_field('PUT') !!}
 		{!! csrf_field() !!}
+		<input type="hidden" name='submit'>
 		<div class="form-group">
 		  <label>title</label>
 		  <input type="text" class="form-control" placeholder="text" name='title' value='{{ old("title", $article->title) }}'>
 		</div>
 		<div class="form-group">
 		  <label>Category</label>
-		  <input type="text" class="form-control" data-role="tagsinput" placeholder="category" name='category' value='{{ old("category", $article->category) }}'>
-		  <p class="help-block">
-		  	Categories: 
+		  <input type="text" class="form-control" data-role="tagsinput" name='category' value='{{ old("category", $article->category) }}'>
+		  <p class="help-block" id='category-block'>
+		  	Categories Of All: 
 		  	@foreach ($categories as $cate)
 		  		<button class="btn btn-default" type="button">{{ $cate }}</button>
 		  	@endforeach
@@ -24,13 +25,20 @@
 		</div>
 		<div class="form-group">
 		  <label>series</label>
-		  <input type="text" class="form-control" data-role="tagsinput" placeholder="series" name='series' value='{{ old("series", $article->series) }}'>
+		  <input type="text" class="form-control" data-role="tagsinput" name='series' value='{{ old("series", $article->series) }}'>
+		  <p class="help-block" id='series-block'>
+		  	Series Recently: 
+		  	@foreach ($series as $serie)
+		  		<button class="btn btn-default" type="button">{{ $serie }}</button>
+		  	@endforeach
+		  	</p>
 		</div>
 		<div class="form-group">
 			<label>Content</label>
 			<textarea class="form-control js-auto-size" name="content">{{ old("content", $article->content) }}</textarea>
 		</div>
-		<button type="submit" class="btn btn-default">Submit</button>
+		<button type="submit" class="btn btn-default">Update Draft</button>
+		<button type="submit" class="btn btn-default">Publish</button>
 
 	</form>
 	</div>
@@ -39,10 +47,21 @@
 
 @section('js')
 <script>
-var simplemde = new SimpleMDE();
-console.log(simplemde.value());
-$('input[name="category"]').tagsinput({
-  maxTags: 1
-});
+// var simplemde = new SimpleMDE();
+// console.log(simplemde.value());
+
+singleTagInput('category')
+singleTagInput('series')
+function singleTagInput(name) {
+	let single = $('input[name="' + name + '"]')
+	single.tagsinput({ maxTags: 1})
+	$('#' + name + '-block > button').click( function (e) {
+		single.tagsinput('removeAll')
+		single.tagsinput('add', $(e.target).text())
+	})
+}
+$('button[type="submit"]').click( function (e) {
+	$('input[name="submit"]').val($(e.target).text())
+})
 </script>
 @stop

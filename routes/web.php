@@ -26,8 +26,15 @@ Route::group(['namespace'=>'back', 'middleware'=>'admin'], function () {
     	Route::get('docs', 'DocController@index');
     	Route::get('docs/{doc}/edit', 'DocController@edit');
         Route::put('docs/{doc}', 'DocController@update');
-        Route::get('{category}', 'ArticleController@index')->where(['category' => '(php|js|package|laravel)']);
-    	Route::get('{category}/{article}/edit', 'ArticleController@edit')->name('articleEdit')->where(['category' => '(php|js|package|laravel)', 'article' => '[0-9]+']);
+        
+        Route::group(['where' => ['category' => '(php|js|package|laravel)']], function () {
+            Route::get('{category}', 'ArticleController@index');
+            Route::get('{category}/create', 'ArticleController@create');
+            Route::get('{category}/{article}/edit', 'ArticleController@edit')->name('articleEdit');
+        });
+
+        Route::post('articles', 'ArticleController@store');
+        Route::put('articles/{article}', 'ArticleController@update');
     });
 });
 

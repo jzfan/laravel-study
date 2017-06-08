@@ -4,7 +4,7 @@
 
 <div class="panel panel-default">
 	<!-- Default panel contents -->
-	<div class="panel-heading">Panel heading</div>
+	<div class="panel-heading">Panel heading <a href="/back/{{ $category }}/create">Create +</a></div>
 	<div class="panel-body">
 		<table class="table table-striped pannel-body">
 			<thead>

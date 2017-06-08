@@ -13,8 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        \View::composer('articleEdit', function ($view) {
-            $view->with('categories', \App\Article::select('category')->groupBy('category')->get()->pluck('category'));
+        \View::composer('*', function ($view) {
+            $view->with('categories', \App\Article::groupBy('category')->get(['category'])->pluck('category'));
+            $view->with('series', \App\Article::whereNotNull('series')->groupBy('series')->pluck('series'));
         });
     }
 
