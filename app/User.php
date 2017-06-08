@@ -26,4 +26,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function isAdmin()
+    {
+        if (auth()->check() && auth()->user()->id === 1) {
+            return true;
+        }
+        return false;
+    }
 }

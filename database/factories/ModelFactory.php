@@ -27,7 +27,14 @@ $factory->define(App\Article::class, function (Faker\Generator $faker) {
 	$title = $faker->sentence;
     return [
         'title' => $title,
+        'page_image' => 'default.jpg',
         'content' => $faker->paragraph,
         'view' => 0
+    ];
+});
+
+$factory->define(App\Tag::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->word
     ];
 });

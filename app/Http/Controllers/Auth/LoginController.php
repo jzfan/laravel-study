@@ -39,7 +39,7 @@ class LoginController extends Controller
 
     public function redirectTo()
     {
-        if (auth()->user()->id === 1) {
+        if (auth()->user()->isAdmin()) {
             return '/dashboard';
         }
         return '/home';

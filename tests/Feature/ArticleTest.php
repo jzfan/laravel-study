@@ -10,7 +10,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ArticleTest extends TestCase
 {
-	use DatabaseMigrations;
+	use DatabaseTransactions;
     public function test_article_index()
     {
         $article = factory(Article::class)->create();
@@ -20,14 +20,14 @@ class ArticleTest extends TestCase
     public function test_article_show()
     {
         $article = factory(Article::class)->create();
-        $this->get('/articles/' . $article->slug)
+        $this->get('/articles/' . $article->id)
             ->assertSee($article->title);
     }
 
     public function test_article_view_count_increased_after_vist()
     {
         $article = factory(Article::class)->create();
-        $this->get('/articles/' . $article->slug)->assertStatus(200);
+        $this->get('/articles/' . $article->id)->assertStatus(200);
         $this->assertEquals(1, $article->fresh()->view);
     }
 }

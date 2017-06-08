@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 
 class ArticleController extends Controller
 {
-    public function show($id)
+    public function show($tag, $id)
     {
         $article = Article::find($id);
         $article->increment('view');

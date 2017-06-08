@@ -14,18 +14,18 @@ Auth::routes();
 
 Route::group(['namespace'=>'front'], function () {
 	Route::get('/', 'PageController@index');
-	Route::get('/articles/{id}', 'ArticleController@show');
-	Route::get('docs/{version}', 'DocController@index');
-	Route::get('docs/{version}/{id}', 'DocController@show');
-	Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('docs/{version}', 'DocController@index');
+    Route::get('docs/{version}/{id}', 'DocController@show');
+    Route::get('/home', 'HomeController@index')->name('home');
+	Route::get('/{tag}/{id}', 'ArticleController@show');
 });
 
-Route::group(['namespace'=>'back'], function () {
+Route::group(['namespace'=>'back', 'middleware'=>'admin'], function () {
 	Route::get('dashboard', 'DashboardController@index');
-});
-Route::group(['namespace'=>'back', 'prefix'=>'back'], function () {
-	Route::get('docs', 'DocController@index');
-	Route::get('docs/{doc}/edit', 'DocController@edit');
-	Route::put('docs/{doc}', 'DocController@update');
+    Route::group(['prefix'=>'back'], function () {
+    	Route::get('docs', 'DocController@index');
+    	Route::get('docs/{doc}/edit', 'DocController@edit');
+    	Route::put('docs/{doc}', 'DocController@update');
+    });
 });
 

@@ -1,9 +1,8 @@
 <?php
 
-use App\User;
 use App\Article;
-use App\Doc;
-
+use App\Tag;
+use App\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,17 +21,13 @@ class DatabaseSeeder extends Seeder
         		'password' => bcrypt(env('APP_PASSWORD'))
         	]);
 
-        Article::truncate();
-        factory(Article::class, 33)->create();
+        $this->call(DocSeeder::class);
+        $this->call(TagSeeder::class);
 
-        // $this->call(UsersTableSeeder::class);
-        Doc::truncate();
-        $doc = json_decode(file_get_contents(base_path('/database/doc54.json')), true);
-        $sorted = collect($doc)->sortBy('order')->values();
-        foreach ($sorted as $entry) {
-            unset($entry['order']);
-            $entry['content'] = str_replace('http://laravelacademy.org', '', $entry['content']);
-            Doc::create($entry);
-        }
+        Article::truncate();
+        factory(Article::class, 33)->create()->each( function ($a) {
+            $ids = Tag::inRandomOrder()->take(mt_rand(1,2))->get(['id'])->pluck('id')->toArray();
+            $a->tags()->sync($ids);
+        });
     }
 }
