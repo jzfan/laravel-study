@@ -31,8 +31,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-    <!-- <script src="/js/simplemde.min.js"></script> -->
+    <script src="{{ asset('js/back.js') }}"></script>
+    <script src="/js/simplemde.min.js"></script>
     @yield('js')
 </body>
 </html>

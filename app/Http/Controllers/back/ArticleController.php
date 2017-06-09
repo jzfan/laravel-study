@@ -2,12 +2,21 @@
 
 namespace App\Http\Controllers\back;
 
+use Image;
 use App\Article;
+use App\Common\Uploader;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class ArticleController extends Controller
 {
+    protected $uploader;
+
+    public function __construct(Uploader $uploader)
+    {
+        $this->uploader = $uploader;
+    }
+
     public function index($category)
     {
     	$articles = Article::whereCategory($category)->latest()->paginate(10);
@@ -42,9 +51,9 @@ class ArticleController extends Controller
                 'title' => 'required',
                 'category' => 'required',
             ]);
-        dd(request()->all());
-        $page_image = request()->file('page_image')->move(public_path('uploads/articles'));
-        dd($page_image);
-        Article::{camel_case(request('submit'))}(request()->all());
+        $data = request()->all();
+        $data['page_image'] = $this->uploader->handleArticlePageImage();
+        Article::{camel_case(request('submit'))}($data);
+        return redirect('/back/' . request('category'))->withSuccess('hahaha');
     }
 }

@@ -13,7 +13,7 @@ class TagSeeder extends Seeder
     public function run()
     {
         Tag::truncate();
-        $arr = ['laravel', 'php', 'js', '项目|包'];
+        $arr = ['Composer', 'Validate', 'Api', 'Json', 'Artisan', 'Blade', 'Exception'];
         foreach ($arr as $name) {
             Tag::create(['name' => $name]);
         }

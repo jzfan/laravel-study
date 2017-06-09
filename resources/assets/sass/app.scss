@@ -1,6 +1,6 @@
 
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import 'google-fonts';
 
 // Variables
 @import "variables";
@@ -8,5 +8,10 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+
+@import "node_modules/font-awesome/scss/font-awesome";
+
 @import 'bootstrap-tagsinput.css';
 @import 'simplemde.min.css';
+@import 'function';
+@import 'custom';

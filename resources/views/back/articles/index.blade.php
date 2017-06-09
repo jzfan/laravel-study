@@ -24,7 +24,7 @@
 					<td>{{ $article->id }}</td>
 					<td><a href="/{{ $article->category }}/{{ $article->id }}" target="_blank">{{ $article->title }}</a></td>
 					<td>{{ $article->series }}</td>
-					<td><img src="{{ $article->page_image }}" alt=""></td>
+					<td><img src="/img-cache/small/articles/{{ $article->pageImageName() }}" alt=""></td>
 					<td>{{ $article->published_at ? $article->published_at->format('Y-m-d') : '' }}</td>
 					<td>{{ $article->view }}</td>
 					<td>

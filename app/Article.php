@@ -12,7 +12,7 @@ class Article extends Model
 
     public function tags()
     {
-        return $this->belongsToMany(Tag::class);
+        return $this->morphToMany(Tag::class, 'taggable');
     }
 
     public function updateDraft($data)
@@ -33,5 +33,14 @@ class Article extends Model
     public static function saveDraft($data)
     {
         return static::create($data);
+    }
+
+    public function pageImageName()
+    {
+        if (is_null($this->page_image)) {
+            return 'coding.jpeg';
+        }
+        $arr = explode('/', $this->page_image);
+        return end($arr);
     }
 }

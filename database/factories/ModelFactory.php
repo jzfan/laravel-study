@@ -26,7 +26,6 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 $factory->define(App\Article::class, function (Faker\Generator $faker) {
     return [
         'title' => $faker->sentence,
-        'page_image' => 'default.jpg',
         'category' => $faker->randomElement(['php', 'js', 'laravel', 'package']),
         'series' => $faker->optional($weight = 0.5)->randomElement(['series 1', 'series 2', 'series 3', 'series 4']),
         'content' => $faker->paragraph,

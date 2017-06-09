@@ -13,4 +13,9 @@ class PageController extends Controller
     	$articles = Article::latest()->take(5)->get();
     	return view('front.index', compact('articles'));
     }
+
+    public function resources()
+    {
+    	return view('front.resources');
+    }
 }

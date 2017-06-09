@@ -18,10 +18,10 @@ class CreateArticlesTable extends Migration
             $table->string('title')->unique();
             $table->string('category');
             $table->string('series')->nullable();
-            $table->string('page_image');
+            $table->string('page_image')->nullable();
             $table->string('quote')->nullable();
             $table->text('content');
-            $table->unsignedInteger('view');
+            $table->unsignedInteger('view')->default(0);
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });
