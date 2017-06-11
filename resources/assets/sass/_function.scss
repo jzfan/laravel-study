@@ -1,6 +1,6 @@
 @function set-text-color($color) {
 	@if (lightness($color) > 50) {
-		@return #000000;
+		@return #525252;
 	}
 	@return #ffffff;
 }

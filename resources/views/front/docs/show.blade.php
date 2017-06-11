@@ -1,15 +1,14 @@
 @extends('front.master')
 
 @section('content')
-<article>
+<article class="col-md-9 well">
     <h3><small>Laravel {{ $entry->version }} {{ $entry->category }}</small> {{ $entry->entry }}</h3>
     <p>
         {!! $entry->content !!}
     </p>
 </article>
-@stop
-
-@section('sidebar')
+<div class="col-md-3">
+    
 <nav class="hidden-print hidden-xs hidden-sm affix" role="navigation">
 <ul class="nav">
 @foreach($entry->anchors as $index => $text)
@@ -19,4 +18,5 @@
 @endforeach
 </ul>
 </nav>
+</div>
 @stop

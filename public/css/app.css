@@ -1,3 +1,72 @@
+/* Base16 Atelier Sulphurpool Dark - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/sulphurpool) */
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+
+/* Atelier-Sulphurpool Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #898ea4;
+}
+
+/* Atelier-Sulphurpool Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-name,
+.hljs-regexp,
+.hljs-link,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #c94922;
+}
+
+/* Atelier-Sulphurpool Orange */
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+  color: #c76b29;
+}
+
+/* Atelier-Sulphurpool Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+  color: #ac9739;
+}
+
+/* Atelier-Sulphurpool Blue */
+.hljs-title,
+.hljs-section {
+  color: #3d8fd1;
+}
+
+/* Atelier-Sulphurpool Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #6679cc;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #202746;
+  color: #979db4;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
 .bootstrap-tagsinput {
   background-color: #fff;
   border: 1px solid #ccc;
@@ -67,7 +136,7 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 100;
-  src: local("Raleway Thin"), local("Raleway-Thin"), url(https://fonts.gstatic.com/s/raleway/v11/rr0ijB5_2nAJsAoZ6vECXRJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");
+  src: local("Raleway Thin"), local("Raleway-Thin"), url(/fonts/google/rr0ijB5_2nAJsAoZ6vECXRJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");
   unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -77,7 +146,67 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 100;
-  src: local("Raleway Thin"), local("Raleway-Thin"), url(https://fonts.gstatic.com/s/raleway/v11/RJMlAoFXXQEzZoMSUteGWFtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
+  src: local("Raleway Thin"), local("Raleway-Thin"), url(/fonts/google/RJMlAoFXXQEzZoMSUteGWFtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/* latin-ext */
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Raleway Light"), local("Raleway-Light"), url(/fonts/goolge/ZKwULyCG95tk6mOqHQfRBCEAvth_LlrfE80CYdSH47w.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Raleway Light"), local("Raleway-Light"), url(/fonts/goolge/-_Ctzj9b56b8RgXW8FArifk_vArhqVIZ0nv9q090hN8.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/* latin-ext */
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Raleway"), local("Raleway-Regular"), url(/fonts/google/yQiAaD56cjx1AooMTSghGfY6323mHUZFJMgTvxaG2iE.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Raleway"), local("Raleway-Regular"), url(/fonts/google/0dTEPzkLWceF7z0koJaX1A.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/* latin-ext */
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Raleway Medium"), local("Raleway-Medium"), url(/fonts/google/Li18TEFObx_yGdzKDoI_ciEAvth_LlrfE80CYdSH47w.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Raleway Medium"), local("Raleway-Medium"), url(/fonts/google/CcKI4k9un7TZVWzRVT-T8_k_vArhqVIZ0nv9q090hN8.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
@@ -87,7 +216,7 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 600;
-  src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url(https://fonts.gstatic.com/s/raleway/v11/STBOO2waD2LpX45SXYjQBSEAvth_LlrfE80CYdSH47w.woff2) format("woff2");
+  src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url(/fonts/google/STBOO2waD2LpX45SXYjQBSEAvth_LlrfE80CYdSH47w.woff2) format("woff2");
   unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -97,7 +226,7 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 600;
-  src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url(https://fonts.gstatic.com/s/raleway/v11/xkvoNo9fC8O2RDydKj12b_k_vArhqVIZ0nv9q090hN8.woff2) format("woff2");
+  src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url(/fonts/google/xkvoNo9fC8O2RDydKj12b_k_vArhqVIZ0nv9q090hN8.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
@@ -1497,7 +1626,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Raleway, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -5757,12 +5886,12 @@ tbody.collapse.in {
 }
 
 .navbar-default .navbar-brand {
-  color: #777;
+  color: #f4645f;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #5e5d5d;
+  color: #f1362f;
   background-color: transparent;
 }
 
@@ -7342,8 +7471,8 @@ button.list-group-item-danger.active:focus {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
+  background-color: #fff;
+  border: 1px solid #ededed;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
@@ -7554,7 +7683,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -7688,7 +7817,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -11458,29 +11587,94 @@ button.close {
   box-shadow: 1px 0 2px 2px rgba(42, 42, 42, 0.25);
 }
 
-.img-card .panel-body {
-  padding: 0;
+.navbar-default .navbar-brand {
+  font-weight: 500;
 }
 
-.img-card .panel-body :hover {
+.card {
+  margin: 15px 0;
+  box-shadow: 0 1px 5px #dcdcdc;
+}
+
+.card .card-image {
+  max-height: 150px;
+  overflow-y: hidden;
+}
+
+.card .card-image :hover {
   opacity: .8;
 }
 
-.img-card .panel-footer {
+.card .card-image img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.card .card-text {
+  width: 100%;
+  padding: 20px 30px;
   min-height: 115px;
-  background: #2a2a2a;
-  color: #ffffff;
-  border: 0;
+  background: #ffffff;
+  color: #525252;
 }
 
-.img-card .panel-footer span {
-  color: #f4645f;
-}
-
-.img-card a {
+.card a {
   text-decoration: none;
 }
 
-li {
-  list-style-type: none;
+.card-black .card .card-text {
+  background: #2a2a2a;
+  color: #ffffff;
+}
+
+.card-big .card {
+  background-color: #2a2a2a;
+  min-height: 540px;
+}
+
+.card-big .card .card-image {
+  max-height: 540px;
+}
+
+.card-right .card {
+  height: 244px;
+}
+
+ol li {
+  list-style-type: decimal;
+}
+
+s pre code {
+  font-size: 16px;
+}
+
+.article-title {
+  color: #f4645f;
+}
+
+.main-color {
+  color: #f4645f;
+}
+
+.showcase {
+  background-color: #fff;
+  margin-top: -40px;
+}
+
+.showcase .container {
+  padding: 40px;
+}
+
+.main-wraper {
+  padding: 0 40px 100px !important;
+}
+
+.more {
+  font-size: 14px;
+  color: #525252;
+  line-height: 30px;
+}
+
+.more :hover {
+  color: #f4645f;
 }

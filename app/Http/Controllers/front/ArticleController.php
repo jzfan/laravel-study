@@ -10,7 +10,7 @@ class ArticleController extends Controller
 {
     public function show($category, $id)
     {
-        $article = Article::with('tags')->find($id);
+        $article = Article::with('tags')->find($id)->parseMarkdownContent();
         $article->increment('view');
         return view('front.article', compact('article'));
     }

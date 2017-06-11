@@ -12,21 +12,21 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/my.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         @include('front.partials.nav')
-        <div class="container">
-            <div class="row">
-                    
-                @yield('content')
+        @includeWhen(request()->is('/'), 'front.partials.showcase')
 
-            </div>
+        <div class="container main-wraper">
+            @yield('content')
         </div>
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="/js/highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    @yield('js')
 </body>
 </html>

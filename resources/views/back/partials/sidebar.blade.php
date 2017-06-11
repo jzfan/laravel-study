@@ -5,10 +5,9 @@
   <li><a href="/back/docs">文档</a></li>
   <li>文章
   <ul style="margin-left: -20px">
-  	<li><a href="/back/laravel">laravel</a></li>
-  	<li><a href="/back/php">php</a></li>
-  	<li><a href="/back/js">js</a></li>
-
+    @foreach ($categories as $category)
+  	<li><a href="/back/category/{{ strtolower($category) }}">{{ $category }}</a></li>
+    @endforeach
   </ul>
   </li>
 </ul>

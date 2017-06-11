@@ -14,6 +14,16 @@
 		  <input type="text" class="form-control" placeholder="text" name='title' value='{{ old("title", $article->title) }}'>
 		</div>
 		<div class="form-group">
+		  <label>Tag</label>
+		  <input type="text" class="form-control" data-role="tagsinput" name='tag' value='{{ old("tag", $article->getTagsInputString()) }}'>
+		  <p class="help-block" id='tag-block'>
+		    Tags Of All: 
+		    @foreach ($tags as $tag)
+		        <button class="btn btn-default btn-sm" type="button">{{ $tag->name }}</button>
+		    @endforeach
+		    </p>
+		</div>
+		<div class="form-group">
 		  <label>Category</label>
 		  <input type="text" class="form-control" data-role="tagsinput" name='category' value='{{ old("category", $article->category) }}'>
 		  <p class="help-block" id='category-block'>
@@ -35,7 +45,7 @@
 		</div>
 		<div class="form-group">
 			<label>Content</label>
-			<textarea class="form-control js-auto-size" name="content">{{ old("content", $article->content) }}</textarea>
+			<textarea class="form-control" name="content">{{ old("content", $article->content) }}</textarea>
 		</div>
 		<button type="submit" class="btn btn-default">Update Draft</button>
 		<button type="submit" class="btn btn-default">Publish</button>
@@ -46,22 +56,9 @@
 @stop
 
 @section('js')
-<script>
-// var simplemde = new SimpleMDE();
-// console.log(simplemde.value());
 
-singleTagInput('category')
-singleTagInput('series')
-function singleTagInput(name) {
-	let single = $('input[name="' + name + '"]')
-	single.tagsinput({ maxTags: 1})
-	$('#' + name + '-block > button').click( function (e) {
-		single.tagsinput('removeAll')
-		single.tagsinput('add', $(e.target).text())
-	})
-}
-$('button[type="submit"]').click( function (e) {
-	$('input[name="submit"]').val($(e.target).text())
-})
+@include('back.partials.article-form-js')
+<script>
+tagsInputWithBotton('category')
 </script>
 @stop

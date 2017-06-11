@@ -20,7 +20,7 @@ Route::group(['namespace'=>'front'], function () {
     Route::get('docs/{version}', 'DocController@index');
     Route::get('docs/{version}/{id}', 'DocController@show');
     Route::get('/home', 'HomeController@index')->name('home');
-	Route::get('/{category}/{id}', 'ArticleController@show')->where(['category' => '(php|js|package|laravel)', 'id' => '[0-9]+']);
+	Route::get('/category/{category}/{id}', 'ArticleController@show')->where(['id' => '[0-9]+']);
 });
 
 Route::group(['namespace'=>'back', 'middleware'=>'admin'], function () {
@@ -30,14 +30,23 @@ Route::group(['namespace'=>'back', 'middleware'=>'admin'], function () {
     	Route::get('docs/{doc}/edit', 'DocController@edit');
         Route::put('docs/{doc}', 'DocController@update');
         
-        Route::group(['where' => ['category' => '(php|js|package|laravel)']], function () {
-            Route::get('{category}', 'ArticleController@index');
-            Route::get('{category}/create', 'ArticleController@create');
-            Route::get('{category}/{article}/edit', 'ArticleController@edit')->name('articleEdit');
-        });
+        Route::get('/category/{category}', 'ArticleController@index');
+        Route::get('/category/{category}/create', 'ArticleController@create');
+        Route::get('/category/{category}/{article}/edit', 'ArticleController@edit');
 
         Route::post('articles', 'ArticleController@store');
         Route::put('articles/{article}', 'ArticleController@update');
     });
+});
+
+Route::get('auth/{service}', 'Auth\SocialiteController@redirectToProvider')->middleware('guest');
+Route::get('auth/{service}/callback', 'Auth\SocialiteController@handleProviderCallback');
+
+Route::get('test', function () {
+    return view('test');
+});
+
+Route::post('test', function () {
+    dd(request()->all());
 });
 

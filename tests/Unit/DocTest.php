@@ -20,4 +20,12 @@ class DocTest extends TestCase
         preg_match_all('/(toc_\d{1,2})[\'|\"]>(.+?)</', $content, $matches);
         return collect($matches[1])->combine($matches[2]);
     }
+
+    public function test_highlight()
+    {
+        $reg = '/<pre>(?!<code>)(.+?)(?!<\/code>)<\/pre>/';
+        $replace = '<pre><code>$1</code></pre>';
+        $html = '<pre>$value = config("app.timezone");</pre>';
+        echo preg_replace($reg, $replace, $html);
+    }
 }

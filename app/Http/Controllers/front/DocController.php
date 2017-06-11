@@ -18,7 +18,7 @@ class DocController extends Controller
     public function show($version, $id)
     {
         $entry = Doc::find($id)->appendAnchors();
-        // dd($entry->content);
+        // dd($entry->anchors);
         return view('front.docs.show', compact('entry'));
     }
 }

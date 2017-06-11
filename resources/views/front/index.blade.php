@@ -1,22 +1,15 @@
 @extends('front.master')
 
 @section('content')
-<h1>World Wild</h1>
-@foreach ($articles as $article)
-<div class="col-md-4">
-<div class="panel panel-default img-card">
-<a href="/{{ $article->category }}/{{ $article->id }}">
-    <div class="panel-body">
-        <img class='img-responsive' src="/img-cache/large/articles/{{ $article->pageImageName() }}" alt="">
-    </div>
-    <div class="panel-footer">
-    	<span class='card-label'>{{ $article->category }}</span>
-    	<h4>
-    		{{ $article->title }}
-    	</h4>
-    </div>
-</a>
-</div>
-</div>
-@endforeach
+@includeWhen( !$laravels->isEmpty(), 'front.partials.listOfCategory', ['data' => $laravels, 'title' => 'Laravel', 'link' => '/category/laravel'])
+<hr>
+@includeWhen( !$tdds->isEmpty(), 'front.partials.listOfCategory', ['data' => $tdds, 'title' => 'Larvel & TDD', 'link' => '/category/tdd'])
+<hr>
+@includeWhen( !$vues->isEmpty(), 'front.partials.listOfCategory', ['data' => $vues, 'title' => 'Laravel & Vue', 'link' => '/category/vue'])
 @endsection
+
+@section('js')
+<script>
+    $('pre').attr('style', 'background: #c5c5c5')
+</script>
+@stop

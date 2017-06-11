@@ -1,3 +1,4 @@
+@import 'function';
 
 // Fonts
 @import 'google-fonts';
@@ -10,8 +11,7 @@
 
 
 @import "node_modules/font-awesome/scss/font-awesome";
-
+@import 'highlight.css';
 @import 'bootstrap-tagsinput.css';
 @import 'simplemde.min.css';
-@import 'function';
 @import 'custom';

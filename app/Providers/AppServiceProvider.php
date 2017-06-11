@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        \View::composer('*', function ($view) {
+        \View::composer('back.*', function ($view) {
             $view->with('categories', \App\Article::groupBy('category')->get(['category'])->pluck('category'));
             $view->with('tags', \App\Tag::all());
             $view->with('series', \App\Article::whereNotNull('series')->groupBy('series')->pluck('series'));

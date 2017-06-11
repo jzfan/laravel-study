@@ -14,4 +14,11 @@ class Tag extends Model
     {
         return $this->morphedByMany(Article::class, 'taggable');
     }
+
+    public static function byTagsInputString($names)
+    {
+        return collect(explode(',', $names))->map( function ($name) {
+                    return static::firstOrCreate(['name' => $name]);
+                });
+    }
 }

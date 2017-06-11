@@ -36,12 +36,9 @@
                  <li><a href="/docs/5.1">Laravel 5.1</a></li>
              </ul>
          </li>
-         <li><a href="">Laravel</a></li>
-         <li><a href="">PHP</a></li>
-         <li><a href="">JS</a></li>
-         <li><a href="">项目|包</a></li>
-         <li><a href="">资源</a></li>
-         <li><a href="">关于</a></li>
+         <li><a href="/category/laravel">Laravel</a></li>
+         <li><a href="/category/tdd">TDD</a></li>
+         <li><a href="/category/vue">Vue</a></li>
          @if (Auth::guest())
              <li><a href="{{ route('login') }}">Login</a></li>
          @else

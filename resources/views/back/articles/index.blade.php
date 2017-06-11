@@ -22,13 +22,17 @@
 				@foreach ($articles as $article)
 				<tr>
 					<td>{{ $article->id }}</td>
-					<td><a href="/{{ $article->category }}/{{ $article->id }}" target="_blank">{{ $article->title }}</a></td>
+					<td><a href="/{{ strtolower($article->category) }}/{{ $article->id }}" target="_blank">{{ $article->title }}</a></td>
 					<td>{{ $article->series }}</td>
-					<td><img src="/img-cache/small/articles/{{ $article->pageImageName() }}" alt=""></td>
+					<td>
+						@if ($article->page_image)
+						<img src="/img-cache/small/articles/{{ $article->pageImageName() }}" alt="">
+						@endif
+					</td>
 					<td>{{ $article->published_at ? $article->published_at->format('Y-m-d') : '' }}</td>
 					<td>{{ $article->view }}</td>
 					<td>
-						<a class="btn btn-default" href="/back/{{ $article->category }}/{{ $article->id }}/edit" role="button">Edit</a>
+						<a class="btn btn-default" href="/back/{{ strtolower($article->category) }}/{{ $article->id }}/edit" role="button">Edit</a>
 					</td>
 				</tr>
 				@endforeach

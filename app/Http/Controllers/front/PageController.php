@@ -10,8 +10,12 @@ class PageController extends Controller
 {
     public function index()
     {
-    	$articles = Article::latest()->take(5)->get();
-    	return view('front.index', compact('articles'));
+    	return view('front.index', [
+                'tops' => Article::lastPublishedOfAll(6),
+                'laravels' => Article::lastPublishedOfCategory('Laravel', 3),
+                'tdds' => Article::lastPublishedOfCategory('TDD', 3),
+                'vues' => Article::lastPublishedOfCategory('Vue', 3),
+            ]);
     }
 
     public function resources()

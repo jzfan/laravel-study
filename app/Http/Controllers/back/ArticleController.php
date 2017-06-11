@@ -37,7 +37,7 @@ class ArticleController extends Controller
                 'submit' => 'required|in:Update Draft,Publish'
             ]);
         $article->{camel_case(request('submit'))}(request()->all());
-        return redirect('/back/'.request('category'))->with('success', 'hahaha');
+        return redirect('/back/'.strtolower(request('category')))->with('success', 'hahaha');
     }
 
     public function create($category)

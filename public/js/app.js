@@ -13033,6 +13033,8 @@ return jQuery;
 __webpack_require__(1);
 __webpack_require__(4);
 __webpack_require__(0);
+// require('./clipboard.js');
+// require('./highlight.js')
 // require('./simplemde.min.js');
 
 // window.Vue = require('vue');
