@@ -33,11 +33,20 @@ class Article extends Model
 
     public function pageCode()
     {
-        if (preg_match('/```([\s\S]+?)```/', $this->content, $match)) {
-            // dd($match[1]);
-            return preg_replace('/\t/', ' ', $match[1]);
+        if (! preg_match_all('/```([\s\S]+?)```/', $this->content, $match)) {
+            return false;
         }
-        return false;
+        $lines = '';
+        foreach ($match[1] as $segment) {
+            $lines .= $segment;
+            if(preg_match_all('/\n/', $lines) >= 10) {
+                break;
+            }         
+        }
+        // dd($lines);
+        // $str = str_replace(PHP_EOL, '', $match[1]); 
+        // dd($str);
+        return preg_replace('/\t/', ' ', $lines);
     }
 
     public function parseMarkdownContent()

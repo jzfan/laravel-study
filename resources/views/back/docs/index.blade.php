@@ -26,7 +26,7 @@
 					<td><a href="/docs/{{ $entry->version }}/{{ $entry->id }}" target="_blank">{{ $entry->entry }}</a></td>
 					<td>{{ $entry->created_at->format('Y-m-d') }}</td>
 					<td>
-						<a class="btn btn-default" href="/back/docs/{{ $entry->id }}/edit" role="button">Edit</a>
+						<a class="btn btn-default" href="/back/category/docs/{{ $entry->id }}/edit" role="button">Edit</a>
 					</td>
 				</tr>
 				@endforeach

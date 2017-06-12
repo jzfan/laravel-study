@@ -11582,6 +11582,10 @@ button.close {
   clip: auto;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .navbar-default {
   border-top: 5px solid #f4645f;
   box-shadow: 1px 0 2px 2px rgba(42, 42, 42, 0.25);
@@ -11644,8 +11648,24 @@ ol li {
   list-style-type: decimal;
 }
 
-s pre code {
-  font-size: 16px;
+p {
+  margin: 15px 0;
+}
+
+article pre,
+article pre > code {
+  padding: 10px 15px;
+  font-size: .8125rem;
+  background-color: #fff !important;
+  border-radius: 0px;
+}
+
+article pre {
+  display: block;
+  border: 2px solid #e8e8e8;
+  border-radius: 2px;
+  line-height: 1.6em;
+  margin: 1em 0px 1em;
 }
 
 .article-title {
@@ -11666,7 +11686,7 @@ s pre code {
 }
 
 .main-wraper {
-  padding: 0 40px 100px !important;
+  padding: 25px 40px 60px !important;
 }
 
 .more {
@@ -11677,4 +11697,36 @@ s pre code {
 
 .more :hover {
   color: #f4645f;
+}
+
+.search_box {
+  background-color: #525252;
+  padding: 10px;
+  color: #fff;
+}
+
+.search_box h4 {
+  margin: 15px 0;
+}
+
+.search_box .list-group-item {
+  border: 0;
+  background-color: inherit;
+}
+
+.search_box .list-group-item a {
+  color: #fff;
+}
+
+.search_box .list-group-item a :hover {
+  color: #f1362f;
+  text-decoration: none;
+}
+
+.tags_box h2,
+.tags_box h3,
+.tags_box h4,
+.tags_box h5 {
+  display: inline-block;
+  margin: 5px 10px 0 0;
 }

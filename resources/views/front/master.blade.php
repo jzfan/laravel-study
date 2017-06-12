@@ -23,6 +23,10 @@
         </div>
     </div>
 
+    <span class="scroll-back-to-top-inner hidden-md">
+            <i class="fa fa-2x fa-arrow-up"></i>
+    </span>
+    @include('front.partials.footer')
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="/js/highlight.js"></script>

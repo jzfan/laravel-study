@@ -30,9 +30,9 @@ Route::group(['namespace'=>'back', 'middleware'=>'admin'], function () {
     	Route::get('docs/{doc}/edit', 'DocController@edit');
         Route::put('docs/{doc}', 'DocController@update');
         
-        Route::get('/category/{category}', 'ArticleController@index');
-        Route::get('/category/{category}/create', 'ArticleController@create');
-        Route::get('/category/{category}/{article}/edit', 'ArticleController@edit');
+        Route::get('category/{category}', 'ArticleController@index');
+        Route::get('category/{category}/create', 'ArticleController@create');
+        Route::get('category/{category}/{article}/edit', 'ArticleController@edit');
 
         Route::post('articles', 'ArticleController@store');
         Route::put('articles/{article}', 'ArticleController@update');

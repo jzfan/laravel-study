@@ -1,7 +1,9 @@
 @extends('front.master')
 
 @section('content')
-@includeWhen( !$laravels->isEmpty(), 'front.partials.listOfCategory', ['data' => $laravels, 'title' => 'Laravel', 'link' => '/category/laravel'])
+<br>
+<br>
+@includeWhen( !$laravels->isEmpty(), 'front.partials.listOfCategory', ['data' => $laravels, 'title' => 'Laravel Blog', 'link' => '/category/laravel'])
 <hr>
 @includeWhen( !$tdds->isEmpty(), 'front.partials.listOfCategory', ['data' => $tdds, 'title' => 'Larvel & TDD', 'link' => '/category/tdd'])
 <hr>

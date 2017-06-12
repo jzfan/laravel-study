@@ -43,7 +43,7 @@ class DocSeeder extends Seeder
 
     protected function addCodeForHighlight($entry)
     {
-        $reg = '/<pre>(?!<code>)(.+?)(?!<\/code>)<\/pre>/';
+        $reg = '/<pre>(?!<code>)([\s\S]+?)(?!<\/code>)<\/pre>/';
         $replace = '<pre><code>$1</code></pre>';
         $entry['content'] = preg_replace($reg, $replace, $entry['content']);
         return $entry;

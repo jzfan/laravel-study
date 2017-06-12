@@ -4,7 +4,7 @@
 
 <div class="panel panel-default">
 	<!-- Default panel contents -->
-	<div class="panel-heading">Panel heading <a href="/back/{{ $category }}/create">Create +</a></div>
+	<div class="panel-heading">Panel heading <a href="/back/category/{{ $category }}/create">Create +</a></div>
 	<div class="panel-body">
 		<table class="table table-striped pannel-body">
 			<thead>
@@ -22,7 +22,7 @@
 				@foreach ($articles as $article)
 				<tr>
 					<td>{{ $article->id }}</td>
-					<td><a href="/{{ strtolower($article->category) }}/{{ $article->id }}" target="_blank">{{ $article->title }}</a></td>
+					<td><a href="/category/{{ strtolower($article->category) }}/{{ $article->id }}" target="_blank">{{ $article->title }}</a></td>
 					<td>{{ $article->series }}</td>
 					<td>
 						@if ($article->page_image)
@@ -32,7 +32,7 @@
 					<td>{{ $article->published_at ? $article->published_at->format('Y-m-d') : '' }}</td>
 					<td>{{ $article->view }}</td>
 					<td>
-						<a class="btn btn-default" href="/back/{{ strtolower($article->category) }}/{{ $article->id }}/edit" role="button">Edit</a>
+						<a class="btn btn-default" href="/back/category/{{ strtolower($article->category) }}/{{ $article->id }}/edit" role="button">Edit</a>
 					</td>
 				</tr>
 				@endforeach

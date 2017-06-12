@@ -13,10 +13,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        view()->share('tags', \App\Tag::all());
         \View::composer('back.*', function ($view) {
             $view->with('categories', \App\Article::groupBy('category')->get(['category'])->pluck('category'));
-            $view->with('tags', \App\Tag::all());
             $view->with('series', \App\Article::whereNotNull('series')->groupBy('series')->pluck('series'));
+        });
+        \View::composer('front.*', function ($view) {
+            $view->with('hots', \App\Article::orderBy('view', 'desc')->take(5)->get());
         });
     }
 

@@ -37,7 +37,7 @@ class ArticleController extends Controller
                 'submit' => 'required|in:Update Draft,Publish'
             ]);
         $article->{camel_case(request('submit'))}(request()->all());
-        return redirect('/back/'.strtolower(request('category')))->with('success', 'hahaha');
+        return redirect('/back/category/'.strtolower(request('category')))->with('success', 'hahaha');
     }
 
     public function create($category)
@@ -52,8 +52,10 @@ class ArticleController extends Controller
                 'category' => 'required',
             ]);
         $data = request()->all();
-        $data['page_image'] = $this->uploader->handleArticlePageImage();
+        if (request('page_image')) {
+            $data['page_image'] = $this->uploader->handleArticlePageImage();
+        }
         Article::{camel_case(request('submit'))}($data);
-        return redirect('/back/' . request('category'))->withSuccess('hahaha');
+        return redirect('/back/category/' . request('category'))->withSuccess('hahaha');
     }
 }

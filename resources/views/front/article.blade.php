@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="col-md-9">
-<div class="panel panel-default">
+<article class="panel panel-default">
     <div class="panel-header">
     @include('common.article-image', ['size' => 'large'])
     </div>
@@ -10,9 +10,10 @@
         <h3 class='article-title'>{{ $article->title }}</h3>
         {!! $article->content !!}
     </div>
-</div>
+</article> 
 </div>
 <div class="col-md-3">
-    aaaaa
+    @include('front.partials.hot_article_list')
+    @include('front.partials.search')
 </div>
 @endsection
