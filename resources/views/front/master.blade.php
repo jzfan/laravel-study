@@ -16,8 +16,7 @@
 <body>
     <div id="app">
         @include('front.partials.nav')
-        @includeWhen(request()->is('/'), 'front.partials.showcase')
-
+        @yield('showcase')
         <div class="container main-wraper">
             @yield('content')
         </div>

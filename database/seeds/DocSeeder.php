@@ -26,7 +26,7 @@ class DocSeeder extends Seeder
 
     protected function getSortedDoc($version)
     {
-        $doc = json_decode(file_get_contents(base_path('/database/doc'.$version.'.json')), true);
+        $doc = json_decode(file_get_contents(base_path('/database/files/doc'.$version.'.json')), true);
         return collect($doc)->sortBy('order')->values();
     }
 
@@ -43,8 +43,8 @@ class DocSeeder extends Seeder
 
     protected function addCodeForHighlight($entry)
     {
-        $reg = '/<pre>(?!<code>)([\s\S]+?)(?!<\/code>)<\/pre>/';
-        $replace = '<pre><code>$1</code></pre>';
+        $reg = '/<pre>(<code>)*([\s\S]+?)(<\/code>)*<\/pre>/';
+        $replace = '<pre><code>$2</code></pre>';
         $entry['content'] = preg_replace($reg, $replace, $entry['content']);
         return $entry;
     }

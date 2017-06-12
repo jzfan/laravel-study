@@ -1,5 +1,6 @@
 body {
 	overflow-x: hidden;
+	position: relative;
 }
 .navbar-default {
     border-top: 5px solid $main-color;
@@ -10,7 +11,7 @@ body {
 }
 .card {
 	margin: 15px 0;
-	box-shadow: 0 1px 5px #dcdcdc;
+	box-shadow: 0 4px 8px #dcdcdc;
 	.card-image {
 		max-height: 150px;
 		overflow-y: hidden;
@@ -20,6 +21,9 @@ body {
 		img {
 			width: 100%;
 			overflow: hidden;
+		}
+		pre {
+			border-radius: 0px;
 		}
 	}
 	.card-text {
@@ -66,7 +70,7 @@ p {
 article {
 	pre, pre>code {
 	    padding: 10px 15px;
-	    font-size: .8125rem;
+	    font-size: 16px;
 		background-color: #fff!important;
 		border-radius: 0px;
 	}
@@ -83,7 +87,7 @@ article {
 	color: $main-color;
 }
 .main-color {
-	color: $main-color;
+	color: $main-color !important;
 }
 .showcase {
 	background-color: #fff;
@@ -93,7 +97,7 @@ article {
 	margin-top: -40px;
 }
 .main-wraper {
-	padding: 25px 40px 60px !important;
+	padding: 20px 40px 60px !important;
 }
 .more{
 	font-size: 14px;
@@ -105,7 +109,7 @@ article {
 }
 .search_box {
 	background-color: #525252;
-	padding: 10px;
+	padding: 0 10px 10px;
 	color: #fff;
 	h4 {
 		margin: 15px 0;
@@ -125,7 +129,48 @@ article {
 .tags_box {
 	h2,h3,h4,h5 {
 		display: inline-block;
-		margin: 5px 10px 0 0;
+		margin: 0px 10px 5px 0;
+	}
+}
+footer {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+.hots-list {
+	header {
+		background: #ddd;
+		padding-top: 15px;
+	}
+	a {
+		:hover {
+			color: $main-color;
+		}
+	}
+}
+.affix > .nav > li > a {
+	padding: 4px 15px;
+}
+.index_list {
+	margin: 10px 0;
+	display: block;
+	:hover {
+		text-decoration: none !important;
+	}
+}
+.index_list_img {
+	max-height: 150px;
+	overflow: hidden;
+	padding: 0;
+}
+.index_list_content {
+	min-height: 115px;
+	span {
+		color: $main-color;
+		font-weight: 600;
+	}
+	h4 {
+		color: #525252;
 	}
 }
 

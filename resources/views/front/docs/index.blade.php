@@ -6,7 +6,7 @@
 <?php $hight = (int)ceil($groups->count()/2) + 1?>
 <ol>
     @foreach($groups->chunk($hight) as $chunk)
-    <div class="col-md-4">
+    <div class="col-md-6">
     @foreach($chunk as $group)
     <li>
         @foreach($group as $entry)

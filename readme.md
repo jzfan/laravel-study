@@ -1,5 +1,6 @@
 Todo:
-article edit, create
+tag index list a underline
+footer
 dashboard page
 back sidebar afrix bug
 <!-- search -->

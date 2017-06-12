@@ -21,6 +21,7 @@ Route::group(['namespace'=>'front'], function () {
     Route::get('docs/{version}/{id}', 'DocController@show');
     Route::get('/home', 'HomeController@index')->name('home');
 	Route::get('/category/{category}/{id}', 'ArticleController@show')->where(['id' => '[0-9]+']);
+    Route::get('/tags/{tag}', 'ArticleController@byTag');
 });
 
 Route::group(['namespace'=>'back', 'middleware'=>'admin'], function () {

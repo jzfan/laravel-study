@@ -1,5 +1,9 @@
 @extends('front.master')
 
+@section('showcase')
+@include('front.partials.showcase')
+@stop
+
 @section('content')
 <br>
 <br>

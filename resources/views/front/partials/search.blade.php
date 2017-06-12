@@ -14,7 +14,7 @@
 <div class="list-group-item tags_box">
 	@foreach ($tags as $tag)
 	<?php $n = rand(2, 5); ?>
-		<a href="/tags/{{ strtolower($tag->name) }}">
+		<a href="/tags/{{ $tag->id }}">
 			<h{{ $n }} class='lead'>
 				{{ $tag->name }}
 			</h{{ $n }}>
