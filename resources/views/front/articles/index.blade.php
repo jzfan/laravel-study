@@ -19,16 +19,10 @@
 @section('content')
 <div class="row">
 @foreach ($articles as $article)
-<div class="col-md-4 card_box">
-    <a href="" class="list-group index_list">
-      <div class="list-group-item index_list_img">
-        @include('common.article-image', ['size' => 'large'])
-      </div>
-      <div class="list-group-item index_list_content">
-        <span>{{ $article->created_at->diffForHumans() }}</span>
-        <h4 class="list-group-item-text">{{ $article->title }}</h4>
-      </div>
-    </a>
+<div class="col-md-4 col-sm-6">
+    <div class="card-white">
+        @include('front.partials.card')
+    </div>
 </div>
 @endforeach
 <div class="col-md-12">

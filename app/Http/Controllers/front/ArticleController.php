@@ -9,11 +9,12 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-    public function show($category, $id)
+    public function show(Article $article)
     {
-        $article = Article::with('tags')->find($id)->parseMarkdownContent();
         $article->increment('view');
-        return view('front.articles.show', compact('article'));
+        return view('front.articles.show', [
+                'article' => $article->parseMarkdownContent()
+            ]);
     }
 
     public function byTag(Tag $tag)

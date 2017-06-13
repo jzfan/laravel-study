@@ -20,102 +20,44 @@ body {
 .navbar-default {
     border-top: 5px solid $main-color;
     box-shadow: 1px 0 2px 2px rgba(42,42,42,.25);
+    margin-bottom: 0;
     .navbar-brand {
     	font-weight: 500
     }
 }
-.card {
-	margin: 15px 0;
-	box-shadow: 0 4px 8px #dcdcdc;
-	.card-image {
-		max-height: 150px;
-		overflow-y: hidden;
-		:hover {
-			opacity: .8
-		}
-		img {
-			width: 100%;
-			overflow: hidden;
-		}
-		pre {
-			border: 0;
-			border-radius: 0;
-			padding: 10px 10px 0 10px;
-		}
-	}
-	.card-text {
-		width: 100%;
-		padding: 20px 30px;
-		min-height: 115px;
-		background: #ffffff;
-		color: #525252;
-	}
-	a {
-		text-decoration: none;
-	}
+.main-color {
+	color: $main-color !important;
 }
-.card-black {
-	.card {
-		.card-text {
-			background: #2a2a2a;
-			color: #ffffff;
-		}
-	}
+.container {
+	padding: 0 40px;
 }
-.card-big {
-	.card {
-		background-color: #2a2a2a;
-		min-height: 540px;
-		.card-image {
-			max-height: 540px;
-		}
-	}
-}
-.card-right {
-	.card {
-		height: 244px;
-		background: #2a2a2a;
-	}
+.main-wraper {
+	padding: 60px 0;
 }
 ol {
 	li {
 		list-style-type: decimal;
 	}
 }
-p {
-	margin: 15px 0;
+pre {
+	border-radius: 0px;
 }
 article {
 	pre, pre>code {
 	    padding: 10px 15px;
 	    font-size: 16px;
 		background-color: #fff!important;
-		border-radius: 0px;
 	}
 	pre {
 	    display: block;
 	    border: 2px solid #e8e8e8;
-	    border-radius: 2px;
 	    line-height: 1.6em;
 	    margin: 1em 0px 1em;
 	}
 }
-
-.article-title {
-	color: $main-color;
-}
-.main-color {
-	color: $main-color !important;
-}
 .showcase {
 	background-color: #fff;
-	.container {
-		padding: 40px;
-	}
-	margin-top: -40px;
-}
-.main-wraper {
-	padding: 20px 40px 60px !important;
+	padding: 40px 0;
 }
 .more{
 	font-size: 14px;
@@ -162,36 +104,41 @@ article {
 	}
 }
 .affix > .nav > li > a {
-	padding: 4px 15px;
+	padding: 2px 15px;
 }
-.card_box {
-	a:focus,
-	a:hover {
-		text-decoration: none !important;
-	}
-}
-.index_list {
-	margin: 10px 0;
+.card {
 	display: block;
+	borader:2px solid red;
+	padding: 20px 30px;
+	height: 150px;
+	overflow: height;
+	margin-bottom: 15px;
 }
-.index_list_img {
-	max-height: 150px;
-	overflow: hidden;
-	padding: 0;
-	img,pre {
+.card-black {
+	@extend .card;
+	background: #2a2a2a;
+	color: #fff;
+}
+.card-white {
+	@extend .card;
+	background: #fff;
+	color: #525252;
+}
+.card-image-box {
+	.card-image {
+		height: 165px;
+		overflow: hidden;
 		:hover {
-			opacity: .8
+			text-decoration: none;
+			opcity: .8;
+		}
+		pre {
+			margin: 0;
+			border: 0;
+			padding: 30px 30px 0 30px;
+			background-color: rgb(0, 150, 137);
 		}
 	}
 }
-.index_list_content {
-	min-height: 115px;
-	span {
-		color: $main-color;
-		font-weight: 600;
-	}
-	h4 {
-		color: #525252;
-	}
-}
+
 

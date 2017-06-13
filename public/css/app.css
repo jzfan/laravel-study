@@ -1628,7 +1628,7 @@ html {
 body {
   font-family: Raleway, sans-serif;
   font-size: 14px;
-  line-height: 1.42857143;
+  line-height: 1.8;
   color: #333333;
   background-color: #f5f5f5;
 }
@@ -1678,7 +1678,7 @@ img {
 
 .img-thumbnail {
   padding: 4px;
-  line-height: 1.42857143;
+  line-height: 1.8;
   background-color: #f5f5f5;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -1693,8 +1693,8 @@ img {
 }
 
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   border: 0;
   border-top: 1px solid #eeeeee;
 }
@@ -1777,8 +1777,8 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 25px;
+  margin-bottom: 12.5px;
 }
 
 h1 small,
@@ -1802,8 +1802,8 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 12.5px;
+  margin-bottom: 12.5px;
 }
 
 h4 small,
@@ -1852,11 +1852,11 @@ h6,
 }
 
 p {
-  margin: 0 0 10px;
+  margin: 0 0 12.5px;
 }
 
 .lead {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.4;
@@ -2011,15 +2011,15 @@ a.bg-danger:focus {
 }
 
 .page-header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
+  padding-bottom: 11.5px;
+  margin: 50px 0 25px;
   border-bottom: 1px solid #eeeeee;
 }
 
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12.5px;
 }
 
 ul ul,
@@ -2048,12 +2048,12 @@ ol ol {
 
 dl {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 dt,
 dd {
-  line-height: 1.42857143;
+  line-height: 1.8;
 }
 
 dt {
@@ -2101,8 +2101,8 @@ abbr[data-original-title] {
 }
 
 blockquote {
-  padding: 10px 20px;
-  margin: 0 0 20px;
+  padding: 12.5px 25px;
+  margin: 0 0 25px;
   font-size: 17.5px;
   border-left: 5px solid #eeeeee;
 }
@@ -2118,7 +2118,7 @@ blockquote small,
 blockquote .small {
   display: block;
   font-size: 80%;
-  line-height: 1.42857143;
+  line-height: 1.8;
   color: #777777;
 }
 
@@ -2156,9 +2156,9 @@ blockquote.pull-right .small:after {
 }
 
 address {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-style: normal;
-  line-height: 1.42857143;
+  line-height: 1.8;
 }
 
 code,
@@ -2194,10 +2194,10 @@ kbd kbd {
 
 pre {
   display: block;
-  padding: 9.5px;
-  margin: 0 0 10px;
+  padding: 12px;
+  margin: 0 0 12.5px;
   font-size: 13px;
-  line-height: 1.42857143;
+  line-height: 1.8;
   word-break: break-all;
   word-wrap: break-word;
   color: #333333;
@@ -3241,7 +3241,7 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .table > thead > tr > th,
@@ -3251,7 +3251,7 @@ th {
 .table > tfoot > tr > th,
 .table > tfoot > tr > td {
   padding: 8px;
-  line-height: 1.42857143;
+  line-height: 1.8;
   vertical-align: top;
   border-top: 1px solid #ddd;
 }
@@ -3449,7 +3449,7 @@ table th[class*="col-"] {
 @media screen and (max-width: 767px) {
   .table-responsive {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 18.75px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #ddd;
@@ -3509,7 +3509,7 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-size: 21px;
   line-height: inherit;
   color: #333333;
@@ -3560,17 +3560,17 @@ output {
   display: block;
   padding-top: 7px;
   font-size: 14px;
-  line-height: 1.42857143;
+  line-height: 1.8;
   color: #555555;
 }
 
 .form-control {
   display: block;
   width: 100%;
-  height: 34px;
+  height: 39px;
   padding: 6px 12px;
   font-size: 14px;
-  line-height: 1.42857143;
+  line-height: 1.8;
   color: #555555;
   background-color: #fff;
   background-image: none;
@@ -3629,7 +3629,7 @@ input[type="search"] {
   input[type="time"].form-control,
   input[type="datetime-local"].form-control,
   input[type="month"].form-control {
-    line-height: 34px;
+    line-height: 39px;
   }
 
   input[type="date"].input-sm,
@@ -3699,7 +3699,7 @@ input[type="search"] {
 
 .radio label,
 .checkbox label {
-  min-height: 20px;
+  min-height: 25px;
   padding-left: 20px;
   margin-bottom: 0;
   font-weight: normal;
@@ -3767,7 +3767,7 @@ fieldset[disabled]
   padding-top: 7px;
   padding-bottom: 7px;
   margin-bottom: 0;
-  min-height: 34px;
+  min-height: 39px;
 }
 
 .form-control-static.input-lg,
@@ -3832,7 +3832,7 @@ select[multiple].input-sm,
 
 .form-group-sm .form-control-static {
   height: 30px;
-  min-height: 32px;
+  min-height: 37px;
   padding: 6px 10px;
   font-size: 12px;
   line-height: 1.5;
@@ -3888,7 +3888,7 @@ select[multiple].input-lg,
 
 .form-group-lg .form-control-static {
   height: 46px;
-  min-height: 38px;
+  min-height: 43px;
   padding: 11px 16px;
   font-size: 18px;
   line-height: 1.3333333;
@@ -3899,7 +3899,7 @@ select[multiple].input-lg,
 }
 
 .has-feedback .form-control {
-  padding-right: 42.5px;
+  padding-right: 48.75px;
 }
 
 .form-control-feedback {
@@ -3908,9 +3908,9 @@ select[multiple].input-lg,
   right: 0;
   z-index: 2;
   display: block;
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
+  width: 39px;
+  height: 39px;
+  line-height: 39px;
   text-align: center;
   pointer-events: none;
 }
@@ -4037,7 +4037,7 @@ select[multiple].input-lg,
 }
 
 .has-feedback label ~ .form-control-feedback {
-  top: 25px;
+  top: 30px;
 }
 
 .has-feedback label.sr-only ~ .form-control-feedback {
@@ -4123,7 +4123,7 @@ select[multiple].input-lg,
 
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 27px;
+  min-height: 32px;
 }
 
 .form-horizontal .form-group {
@@ -4181,7 +4181,7 @@ select[multiple].input-lg,
   white-space: nowrap;
   padding: 6px 12px;
   font-size: 14px;
-  line-height: 1.42857143;
+  line-height: 1.8;
   border-radius: 4px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4776,7 +4776,7 @@ tbody.collapse.in {
 
 .dropdown-menu .divider {
   height: 1px;
-  margin: 9px 0;
+  margin: 11.5px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -4786,7 +4786,7 @@ tbody.collapse.in {
   padding: 3px 20px;
   clear: both;
   font-weight: normal;
-  line-height: 1.42857143;
+  line-height: 1.8;
   color: #333333;
   white-space: nowrap;
 }
@@ -4844,7 +4844,7 @@ tbody.collapse.in {
   display: block;
   padding: 3px 20px;
   font-size: 12px;
-  line-height: 1.42857143;
+  line-height: 1.8;
   color: #777777;
   white-space: nowrap;
 }
@@ -5310,7 +5310,7 @@ tbody.collapse.in {
 
 .nav .nav-divider {
   height: 1px;
-  margin: 9px 0;
+  margin: 11.5px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -5330,7 +5330,7 @@ tbody.collapse.in {
 
 .nav-tabs > li > a {
   margin-right: 2px;
-  line-height: 1.42857143;
+  line-height: 1.8;
   border: 1px solid transparent;
   border-radius: 4px 4px 0 0;
 }
@@ -5465,7 +5465,7 @@ tbody.collapse.in {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border: 1px solid transparent;
 }
 
@@ -5619,9 +5619,9 @@ tbody.collapse.in {
 
 .navbar-brand {
   float: left;
-  padding: 15px 15px;
+  padding: 12.5px 15px;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 25px;
   height: 50px;
 }
 
@@ -5676,13 +5676,13 @@ tbody.collapse.in {
 }
 
 .navbar-nav {
-  margin: 7.5px -15px;
+  margin: 6.25px -15px;
 }
 
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
-  line-height: 20px;
+  line-height: 25px;
 }
 
 @media (max-width: 767px) {
@@ -5702,7 +5702,7 @@ tbody.collapse.in {
   }
 
   .navbar-nav .open .dropdown-menu > li > a {
-    line-height: 20px;
+    line-height: 25px;
   }
 
   .navbar-nav .open .dropdown-menu > li > a:hover,
@@ -5722,8 +5722,8 @@ tbody.collapse.in {
   }
 
   .navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
   }
 }
 
@@ -5734,8 +5734,8 @@ tbody.collapse.in {
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 5.5px;
+  margin-bottom: 5.5px;
 }
 
 @media (min-width: 768px) {
@@ -5836,8 +5836,8 @@ tbody.collapse.in {
 }
 
 .navbar-btn {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 5.5px;
+  margin-bottom: 5.5px;
 }
 
 .navbar-btn.btn-sm,
@@ -5853,8 +5853,8 @@ tbody.collapse.in {
 }
 
 .navbar-text {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 12.5px;
+  margin-bottom: 12.5px;
 }
 
 @media (min-width: 768px) {
@@ -6126,7 +6126,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 
 .breadcrumb {
   padding: 8px 15px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   list-style: none;
   background-color: #f5f5f5;
   border-radius: 4px;
@@ -6149,7 +6149,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination {
   display: inline-block;
   padding-left: 0;
-  margin: 20px 0;
+  margin: 25px 0;
   border-radius: 4px;
 }
 
@@ -6162,7 +6162,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   position: relative;
   float: left;
   padding: 6px 12px;
-  line-height: 1.42857143;
+  line-height: 1.8;
   text-decoration: none;
   color: #f4645f;
   background-color: #fff;
@@ -6258,7 +6258,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 
 .pager {
   padding-left: 0;
-  margin: 20px 0;
+  margin: 25px 0;
   list-style: none;
   text-align: center;
 }
@@ -6505,8 +6505,8 @@ a.badge:focus {
 .thumbnail {
   display: block;
   padding: 4px;
-  margin-bottom: 20px;
-  line-height: 1.42857143;
+  margin-bottom: 25px;
+  line-height: 1.8;
   background-color: #f5f5f5;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -6535,7 +6535,7 @@ a.thumbnail.active {
 
 .alert {
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -6649,8 +6649,8 @@ a.thumbnail.active {
 
 .progress {
   overflow: hidden;
-  height: 20px;
-  margin-bottom: 20px;
+  height: 25px;
+  margin-bottom: 25px;
   background-color: #f5f5f5;
   border-radius: 4px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -6661,7 +6661,7 @@ a.thumbnail.active {
   width: 0%;
   height: 100%;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 25px;
   color: #fff;
   text-align: center;
   background-color: #f4645f;
@@ -7017,7 +7017,7 @@ button.list-group-item-danger.active:focus {
 }
 
 .panel {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -7270,7 +7270,7 @@ button.list-group-item-danger.active:focus {
 }
 
 .panel-group {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .panel-group .panel {
@@ -7613,7 +7613,7 @@ button.close {
 
 .modal-title {
   margin: 0;
-  line-height: 1.42857143;
+  line-height: 1.8;
 }
 
 .modal-body {
@@ -7688,7 +7688,7 @@ button.close {
   font-weight: normal;
   letter-spacing: normal;
   line-break: auto;
-  line-height: 1.42857143;
+  line-height: 1.8;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -7822,7 +7822,7 @@ button.close {
   font-weight: normal;
   letter-spacing: normal;
   line-break: auto;
-  line-height: 1.42857143;
+  line-height: 1.8;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -11607,74 +11607,31 @@ body {
 .navbar-default {
   border-top: 5px solid #f4645f;
   box-shadow: 1px 0 2px 2px rgba(42, 42, 42, 0.25);
+  margin-bottom: 0;
 }
 
 .navbar-default .navbar-brand {
   font-weight: 500;
 }
 
-.card {
-  margin: 15px 0;
-  box-shadow: 0 4px 8px #dcdcdc;
+.main-color {
+  color: #f4645f !important;
 }
 
-.card .card-image {
-  max-height: 150px;
-  overflow-y: hidden;
+.container {
+  padding: 0 40px;
 }
 
-.card .card-image :hover {
-  opacity: .8;
-}
-
-.card .card-image img {
-  width: 100%;
-  overflow: hidden;
-}
-
-.card .card-image pre {
-  border: 0;
-  border-radius: 0;
-  padding: 10px 10px 0 10px;
-}
-
-.card .card-text {
-  width: 100%;
-  padding: 20px 30px;
-  min-height: 115px;
-  background: #ffffff;
-  color: #525252;
-}
-
-.card a {
-  text-decoration: none;
-}
-
-.card-black .card .card-text {
-  background: #2a2a2a;
-  color: #ffffff;
-}
-
-.card-big .card {
-  background-color: #2a2a2a;
-  min-height: 540px;
-}
-
-.card-big .card .card-image {
-  max-height: 540px;
-}
-
-.card-right .card {
-  height: 244px;
-  background: #2a2a2a;
+.main-wraper {
+  padding: 60px 0;
 }
 
 ol li {
   list-style-type: decimal;
 }
 
-p {
-  margin: 15px 0;
+pre {
+  border-radius: 0px;
 }
 
 article pre,
@@ -11682,36 +11639,18 @@ article pre > code {
   padding: 10px 15px;
   font-size: 16px;
   background-color: #fff !important;
-  border-radius: 0px;
 }
 
 article pre {
   display: block;
   border: 2px solid #e8e8e8;
-  border-radius: 2px;
   line-height: 1.6em;
   margin: 1em 0px 1em;
 }
 
-.article-title {
-  color: #f4645f;
-}
-
-.main-color {
-  color: #f4645f !important;
-}
-
 .showcase {
   background-color: #fff;
-  margin-top: -40px;
-}
-
-.showcase .container {
-  padding: 40px;
-}
-
-.main-wraper {
-  padding: 20px 40px 60px !important;
+  padding: 40px 0;
 }
 
 .more {
@@ -11766,39 +11705,43 @@ article pre {
 }
 
 .affix > .nav > li > a {
-  padding: 4px 15px;
+  padding: 2px 15px;
 }
 
-.card_box a:focus,
-.card_box a:hover {
-  text-decoration: none !important;
-}
-
-.index_list {
-  margin: 10px 0;
+.card,
+.card-black,
+.card-white {
   display: block;
+  borader: 2px solid red;
+  padding: 20px 30px;
+  height: 150px;
+  overflow: height;
+  margin-bottom: 15px;
 }
 
-.index_list_img {
-  max-height: 150px;
-  overflow: hidden;
-  padding: 0;
+.card-black {
+  background: #2a2a2a;
+  color: #fff;
 }
 
-.index_list_img img :hover,
-.index_list_img pre :hover {
-  opacity: .8;
-}
-
-.index_list_content {
-  min-height: 115px;
-}
-
-.index_list_content span {
-  color: #f4645f;
-  font-weight: 600;
-}
-
-.index_list_content h4 {
+.card-white {
+  background: #fff;
   color: #525252;
+}
+
+.card-image-box .card-image {
+  height: 165px;
+  overflow: hidden;
+}
+
+.card-image-box .card-image :hover {
+  text-decoration: none;
+  opcity: .8;
+}
+
+.card-image-box .card-image pre {
+  margin: 0;
+  border: 0;
+  padding: 30px 30px 0 30px;
+  background-color: #009689;
 }

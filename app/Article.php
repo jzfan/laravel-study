@@ -39,7 +39,7 @@ class Article extends Model
         $lines = '';
         foreach ($match[1] as $segment) {
             $lines .= $segment;
-            if(preg_match_all('/\n/', $lines) >= 10) {
+            if(preg_match_all('/\n/', $lines) >= 5) {
                 break;
             }         
         }
