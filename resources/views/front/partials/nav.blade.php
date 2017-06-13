@@ -36,9 +36,9 @@
                  <li><a href="/docs/5.1">Laravel 5.1</a></li>
              </ul>
          </li>
-         <li><a href="/category/laravel">Laravel</a></li>
-         <li><a href="/category/tdd">TDD</a></li>
-         <li><a href="/category/vue">Vue</a></li>
+         <li><a href="/category/Laravel">Laravel</a></li>
+         <li><a href="/category/TDD">TDD</a></li>
+         <li><a href="/category/Vue">Vue</a></li>
          @if (Auth::guest())
              <li><a href="{{ route('login') }}">Login</a></li>
          @else

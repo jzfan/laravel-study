@@ -3,7 +3,7 @@
 @section('showcase')
 <div class="showcase">
     <div class="container text-center">
-        <h2>{{ $tag->name }} Tag</h2>
+        <h2>{{ $title }}</h2>
         <br>
         <p class="tags_box">
         @foreach ($tags as $tag)
@@ -31,5 +31,8 @@
     </a>
 </div>
 @endforeach
+<div class="col-md-12">
+    {!! $articles->links() !!}
+</div>
 </div>
 @endsection

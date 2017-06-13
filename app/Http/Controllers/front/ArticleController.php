@@ -18,7 +18,17 @@ class ArticleController extends Controller
 
     public function byTag(Tag $tag)
     {
-        $articles = $tag->articles()->simplePaginate(12);
-        return view('front.articles.index', compact('articles', 'tag'));
+        return view('front.articles.index', [
+                'articles' => $tag->articles()->simplePaginate(9),
+                'title' => $tag->name
+            ]);
+    }
+
+    public function byCategory($category)
+    {
+        return view('front.articles.index', [
+                'articles' => Article::lastPublishedOfCategory($category)->simplePaginate(9),
+                'title' => $category
+            ]);
     }
 }

@@ -20,7 +20,8 @@ Route::group(['namespace'=>'front'], function () {
     Route::get('docs/{version}', 'DocController@index');
     Route::get('docs/{version}/{id}', 'DocController@show');
     Route::get('/home', 'HomeController@index')->name('home');
-	Route::get('/category/{category}/{id}', 'ArticleController@show')->where(['id' => '[0-9]+']);
+	Route::get('/category/{name}', 'ArticleController@byCategory');
+    Route::get('/category/{name}/{id}', 'ArticleController@show')->where(['id' => '[0-9]+']);
     Route::get('/tags/{tag}', 'ArticleController@byTag');
 });
 

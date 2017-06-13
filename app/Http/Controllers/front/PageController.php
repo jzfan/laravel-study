@@ -8,13 +8,14 @@ use App\Http\Controllers\Controller;
 
 class PageController extends Controller
 {
+
     public function index()
     {
     	return view('front.index', [
-                'tops' => Article::lastPublishedOfAll(6),
-                'laravels' => Article::lastPublishedOfCategory('Laravel', 3),
-                'tdds' => Article::lastPublishedOfCategory('TDD', 3),
-                'vues' => Article::lastPublishedOfCategory('Vue', 3),
+                'tops' => Article::lastPublishedOfAll()->take(6)->get(),
+                'laravels' => Article::lastPublishedOfCategory('Laravel')->take(3)->get(),
+                'tdds' => Article::lastPublishedOfCategory('TDD')->take(3)->get(),
+                'vues' => Article::lastPublishedOfCategory('Vue')->take(3)->get(),
             ]);
     }
 

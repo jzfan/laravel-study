@@ -60,15 +60,15 @@ class Article extends Model
         return join(",", $this->tags->pluck("name")->toArray());
     }
 
-    public static function lastPublishedOfCategory($category, $n=3)
+    public function scopeLastPublishedOfCategory($query, $category)
     {
-        return static::whereNotNull('published_at')->whereCategory($category)
-                    ->orderBy('published_at', 'desc')->take($n)->get();
+        $query->whereNotNull('published_at')->where('category', $category)
+                    ->orderBy('published_at', 'desc');
     }
 
-    public static function lastPublishedOfAll($n=6)
+    public function scopeLastPublishedOfAll($query)
     {
-        return static::whereNotNull('published_at')
-                    ->orderBy('published_at', 'desc')->take($n)->get();
+        $query->whereNotNull('published_at')
+                    ->orderBy('published_at', 'desc');
     }
 }
