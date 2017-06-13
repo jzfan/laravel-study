@@ -11582,9 +11582,26 @@ button.close {
   clip: auto;
 }
 
-body {
-  overflow-x: hidden;
+html {
   position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 80px;
+  overflow-x: hidden;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #525252;
+  text-align: center;
+  font-size: .6875rem;
+  letter-spacing: .2em;
+  padding: 40px 0;
+  color: #fff;
 }
 
 .navbar-default {
@@ -11616,7 +11633,9 @@ body {
 }
 
 .card .card-image pre {
-  border-radius: 0px;
+  border: 0;
+  border-radius: 0;
+  padding: 10px 10px 0 10px;
 }
 
 .card .card-text {
@@ -11647,6 +11666,7 @@ body {
 
 .card-right .card {
   height: 244px;
+  background: #2a2a2a;
 }
 
 ol li {
@@ -11736,12 +11756,6 @@ article pre {
   margin: 0px 10px 5px 0;
 }
 
-footer {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-}
-
 .hots-list header {
   background: #ddd;
   padding-top: 15px;
@@ -11755,19 +11769,25 @@ footer {
   padding: 4px 15px;
 }
 
+.card_box a:focus,
+.card_box a:hover {
+  text-decoration: none !important;
+}
+
 .index_list {
   margin: 10px 0;
   display: block;
-}
-
-.index_list :hover {
-  text-decoration: none !important;
 }
 
 .index_list_img {
   max-height: 150px;
   overflow: hidden;
   padding: 0;
+}
+
+.index_list_img img :hover,
+.index_list_img pre :hover {
+  opacity: .8;
 }
 
 .index_list_content {

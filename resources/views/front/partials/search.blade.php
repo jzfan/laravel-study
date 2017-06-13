@@ -13,11 +13,11 @@
 
 <div class="list-group-item tags_box">
 	@foreach ($tags as $tag)
-	<?php $n = rand(2, 5); ?>
+	<?php $rand = rand(2, 5); ?>
 		<a href="/tags/{{ $tag->id }}">
-			<h{{ $n }} class='lead'>
+			<h{{ $rand }} style='font-weight: {{ (int) ceil($rand/2 + 1)*100 }}!important'>
 				{{ $tag->name }}
-			</h{{ $n }}>
+			</h{{ $rand }}>
 		</a>
 	@endforeach
 </div>

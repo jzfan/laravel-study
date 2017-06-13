@@ -27,6 +27,12 @@
 					<td>
 						@if ($article->page_image)
 						<img src="/img-cache/small/articles/{{ $article->pageImageName() }}" alt="">
+						@else 
+						<form action='/back/articles/{{ $article->id }}/page_image' method="POST" enctype="multipart/form-data">
+							{!! csrf_field() !!}
+							<input type="file" name="page_image">
+							<button class="btn btn-sm btn-default" type="submit">上传图片</button>
+						</form>
 						@endif
 					</td>
 					<td>{{ $article->published_at ? $article->published_at->format('Y-m-d') : '' }}</td>

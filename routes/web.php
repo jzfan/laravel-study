@@ -37,6 +37,8 @@ Route::group(['namespace'=>'back', 'middleware'=>'admin'], function () {
 
         Route::post('articles', 'ArticleController@store');
         Route::put('articles/{article}', 'ArticleController@update');
+
+        Route::post('articles/{article}/page_image', 'ArticleController@uploadPageImage');
     });
 });
 

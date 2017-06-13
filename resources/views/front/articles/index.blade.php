@@ -19,7 +19,7 @@
 @section('content')
 <div class="row">
 @foreach ($articles as $article)
-<div class="col-md-4">
+<div class="col-md-4 card_box">
     <a href="" class="list-group index_list">
       <div class="list-group-item index_list_img">
         @include('common.article-image', ['size' => 'large'])

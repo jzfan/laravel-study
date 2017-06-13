@@ -42,7 +42,7 @@ class ArticleController extends Controller
 
     public function create($category)
     {
-        return view('back.articles.create', compact('category'));   
+        return view('back.articles.create', compact('category'));
     }
 
     public function store()
@@ -57,5 +57,16 @@ class ArticleController extends Controller
         }
         Article::{camel_case(request('submit'))}($data);
         return redirect('/back/category/' . request('category'))->withSuccess('hahaha');
+    }
+
+    public function uploadPageImage(Article $article)
+    {
+        $this->validate(request(), [
+                'page_image' => 'required|file'
+            ]);
+        if ( $path = $this->uploader->handleArticlePageImage()) {
+            $article->update(['page_image' => $path]);
+        }
+        return redirect()->back()->withSuccess('上传图片成功！');
     }
 }
