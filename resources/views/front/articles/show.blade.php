@@ -4,7 +4,7 @@
 <div class="col-md-9">
 <article class="panel panel-default">
     <div class="panel-header">
-    @include('common.article-image', ['size' => 'large'])
+
     </div>
     <div class="panel-body">
         <h3 class='article-title'>{{ $article->title }}</h3>

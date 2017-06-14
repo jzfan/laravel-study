@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-8 col-sm-8">
                 <div class="card-image-box">
-                    @include('front.partials.card-image', ['article' => $tops[0]])
+                    @include('front.partials.card-image', ['article' => $tops[0], 'title' => $tops[0]->category])
                 </div>
             </div>
             <div class="col-sm-4">

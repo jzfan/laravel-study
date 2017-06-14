@@ -22,7 +22,7 @@
 				@foreach ($articles as $article)
 				<tr>
 					<td>{{ $article->id }}</td>
-					<td><a href="/category/{{ strtolower($article->category) }}/{{ $article->id }}" target="_blank">{{ $article->title }}</a></td>
+					<td><a href="/articles/{{ $article->id }}" target="_blank">{{ $article->title }}</a></td>
 					<td>{{ $article->series }}</td>
 					<td>
 						@if ($article->page_image)

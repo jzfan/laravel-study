@@ -4293,29 +4293,29 @@ fieldset[disabled] .btn-default.focus {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #f4645f;
+  color: #f4645f;
+  background-color: #fff;
   border-color: #f24d47;
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
-  color: #fff;
-  background-color: #f1362f;
+  color: #f4645f;
+  background-color: #e6e5e5;
   border-color: #ae110c;
 }
 
 .btn-primary:hover {
-  color: #fff;
-  background-color: #f1362f;
+  color: #f4645f;
+  background-color: #e6e5e5;
   border-color: #ec1810;
 }
 
 .btn-primary:active,
 .btn-primary.active,
 .open > .btn-primary.dropdown-toggle {
-  color: #fff;
-  background-color: #f1362f;
+  color: #f4645f;
+  background-color: #e6e5e5;
   border-color: #ec1810;
 }
 
@@ -4328,8 +4328,8 @@ fieldset[disabled] .btn-default.focus {
 .open > .btn-primary.dropdown-toggle:hover,
 .open > .btn-primary.dropdown-toggle:focus,
 .open > .btn-primary.dropdown-toggle.focus {
-  color: #fff;
-  background-color: #ec1810;
+  color: #f4645f;
+  background-color: #d4d4d4;
   border-color: #ae110c;
 }
 
@@ -4348,13 +4348,13 @@ fieldset[disabled] .btn-default.focus {
 fieldset[disabled] .btn-primary:hover,
 fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary.focus {
-  background-color: #f4645f;
+  background-color: #fff;
   border-color: #f24d47;
 }
 
 .btn-primary .badge {
-  color: #f4645f;
-  background-color: #fff;
+  color: #fff;
+  background-color: #f4645f;
 }
 
 .btn-success {
@@ -11592,6 +11592,10 @@ body {
   overflow-x: hidden;
 }
 
+* {
+  border-radius: 0 !important;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -11604,13 +11608,13 @@ body {
   color: #fff;
 }
 
-.navbar-default {
+.navbar-primary {
   border-top: 5px solid #f4645f;
   box-shadow: 1px 0 2px 2px rgba(42, 42, 42, 0.25);
   margin-bottom: 0;
 }
 
-.navbar-default .navbar-brand {
+.navbar-primary .navbar-brand {
   font-weight: 500;
 }
 
@@ -11630,8 +11634,13 @@ ol li {
   list-style-type: decimal;
 }
 
-pre {
-  border-radius: 0px;
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  color: #fff;
+  background-color: #f4645f;
+  border-color: #f4645f;
 }
 
 article pre,
@@ -11712,11 +11721,11 @@ article pre {
 .card-black,
 .card-white {
   display: block;
-  borader: 2px solid red;
   padding: 20px 30px;
   height: 150px;
-  overflow: height;
+  overflow: hidden;
   margin-bottom: 15px;
+  box-shadow: 0 1px 5px #dcdcdc;
 }
 
 .card-black {
@@ -11726,7 +11735,19 @@ article pre {
 
 .card-white {
   background: #fff;
-  color: #525252;
+  color: #f4645f;
+}
+
+.card-white h4 > a {
+  color: #222;
+}
+
+.card-white h4 > a:hover {
+  color: #6f6e6e;
+}
+
+.card-image-box a:hover {
+  text-decoration: none;
 }
 
 .card-image-box .card-image {
@@ -11734,14 +11755,13 @@ article pre {
   overflow: hidden;
 }
 
-.card-image-box .card-image :hover {
-  text-decoration: none;
-  opcity: .8;
-}
-
 .card-image-box .card-image pre {
   margin: 0;
   border: 0;
   padding: 30px 30px 0 30px;
   background-color: #009689;
+}
+
+.card-image-box .card-image pre code {
+  border-top: 15px solid #fff;
 }

@@ -7,7 +7,7 @@
         <br>
         <p class="tags_box">
         @foreach ($tags as $tag)
-            <a href="/tags/{{ $tag->id }}" class="btn btn-default">
+            <a href="/tags/{{ $tag->id }}" class="btn btn-primary">
                 {{ $tag->name }}
             </a>
         @endforeach
