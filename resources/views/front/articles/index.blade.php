@@ -3,7 +3,7 @@
 @section('showcase')
 <div class="showcase">
     <div class="container text-center">
-        <h2>{{ $title }}</h2>
+        <h2>{{ $header }}</h2>
         <br>
         <p class="tags_box">
         @foreach ($tags as $tag)

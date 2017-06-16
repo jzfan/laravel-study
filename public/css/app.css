@@ -11608,13 +11608,13 @@ body {
   color: #fff;
 }
 
-.navbar-primary {
+.navbar-default {
   border-top: 5px solid #f4645f;
   box-shadow: 1px 0 2px 2px rgba(42, 42, 42, 0.25);
   margin-bottom: 0;
 }
 
-.navbar-primary .navbar-brand {
+.navbar-default .navbar-brand {
   font-weight: 500;
 }
 
@@ -11739,11 +11739,11 @@ article pre {
 }
 
 .card-white h4 > a {
-  color: #222;
+  color: #6f6e6e;
 }
 
 .card-white h4 > a:hover {
-  color: #6f6e6e;
+  color: #000;
 }
 
 .card-image-box a:hover {
@@ -11764,4 +11764,11 @@ article pre {
 
 .card-image-box .card-image pre code {
   border-top: 15px solid #fff;
+}
+
+.editor-header {
+  position: absolute;
+  top: 8.5%;
+  font-size: 6px;
+  left: 50px;
 }

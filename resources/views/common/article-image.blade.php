@@ -2,8 +2,9 @@
 <img class='img-responsive' src="/img-cache/{{ $size }}/articles/{{ $article->pageImageName() }}" alt="">
 @elseif($code = $article->pageCode())
 <div class='editor-header'>
-<span>aaaaaaa</span>
-	<i class="fa fa-user"></i>
+<i class="fa fa-circle" style="color: red"></i>
+<i class="fa fa-circle" style="color: yellow"></i>
+<i class="fa fa-circle" style="color: green"></i>
 </div>
 <pre><code>
     {!! $code !!}
@@ -11,9 +12,3 @@
 @else
 <img class='img-responsive' src="/img-cache/{{ $size }}/articles/{{ $article->defaultImage() }}" alt="">
 @endif
-<style type="text/css">
-	.editor-header {
-		position: absolute;
-		top: 10%;
-	}
-</style>

@@ -21,7 +21,7 @@ class ArticleController extends Controller
     {
         return view('front.articles.index', [
                 'articles' => $tag->articles()->simplePaginate(9),
-                'title' => $tag->name
+                'header' => $tag->name
             ]);
     }
 
@@ -29,7 +29,7 @@ class ArticleController extends Controller
     {
         return view('front.articles.index', [
                 'articles' => Article::lastPublishedOfCategory($category)->simplePaginate(9),
-                'title' => $category
+                'header' => $category
             ]);
     }
 }

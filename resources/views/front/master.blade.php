@@ -17,8 +17,11 @@
     <div id="app">
         @include('front.partials.nav')
         @yield('showcase')
-        <div class="container main-wraper">
-            @yield('content')
+        <div class="container">
+            <div class="main-wraper">
+                
+                @yield('content')
+            </div>
         </div>
     </div>
 

@@ -20,7 +20,7 @@ body {
     padding: 40px 0;
     color: #fff;
 }
-.navbar-primary {
+.navbar-default {
     border-top: 5px solid $main-color;
     box-shadow: 1px 0 2px 2px rgba(42,42,42,.25);
     margin-bottom: 0;
@@ -134,9 +134,9 @@ article {
 	background: #fff;
 	color: $main-color;
 	h4 > a {
-		color: #222;
+		color: #6f6e6e;
 		&:hover {
-			color: lighten(#222, 30%);
+			color: #000;
 		}
 	}
 }
@@ -159,6 +159,12 @@ article {
 			}
 		}
 	}
+}
+.editor-header {
+	position: absolute;
+	top: 8.5%;
+	font-size: 6px;
+	left: 50px;
 }
 
 
