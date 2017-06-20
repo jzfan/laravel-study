@@ -6,11 +6,7 @@
  */
 
 require('./bootstrap');
-require('textarea-autosize');
 require('./bootstrap-tagsinput.min.js');
-// require('./clipboard.js');
-// require('./highlight.js')
-// require('./simplemde.min.js');
 
 // window.Vue = require('vue');
 

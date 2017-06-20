@@ -12,7 +12,7 @@ class Tag extends Model
 
     public function articles()
     {
-        return $this->morphedByMany(Article::class, 'taggable')
+        return $this->belongsToMany(Article::class)
                     ->whereNotNull('published_at')->orderBy('published_at', 'desc');
     }
 

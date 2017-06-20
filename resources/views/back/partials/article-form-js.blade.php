@@ -11,8 +11,5 @@ function tagsInputWithBotton(name, maxtags=1) {
     })
 }
 tagsInputWithBotton('series')
-tagsInputWithBotton('tag', 4)
-$('button[type="submit"]').click( function (e) {
-    $('input[name="submit"]').val($(e.target).text())
-});
+tagsInputWithBotton('tags', 4)
 </script>

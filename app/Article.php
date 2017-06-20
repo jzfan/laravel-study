@@ -15,7 +15,7 @@ class Article extends Model
 
     public function tags()
     {
-        return $this->morphToMany(Tag::class, 'taggable');
+        return $this->belongsToMany(Tag::class);
     }
 
     public function pageImageName()

@@ -34,9 +34,8 @@ class ArticleController extends Controller
                 'title' => 'required',
                 'category' => 'required|exists:articles',
                 'content' => 'required',
-                'submit' => 'required|in:Update Draft,Publish'
             ]);
-        $article->{camel_case(request('submit'))}(request()->all());
+        $article->updateWithTags(request()->all());
         return redirect('/back/category/'.strtolower(request('category')))->with('success', 'hahaha');
     }
 
@@ -55,7 +54,7 @@ class ArticleController extends Controller
         if (request('page_image')) {
             $data['page_image'] = $this->uploader->handleArticlePageImage();
         }
-        Article::{camel_case(request('submit'))}($data);
+        Article::createWithTags($data);
         return redirect('/back/category/' . request('category'))->withSuccess('hahaha');
     }
 
